@@ -1,2 +1,3 @@
 # Blinker
-lets make people see!
+Augmented white cane prototype
+Lets make people see!

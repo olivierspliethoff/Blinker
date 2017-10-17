@@ -12,12 +12,17 @@ CONNECTIONS:
 
 #include <Wire.h>
 #include "U8glib.h"
-#include <SoftwareSerial.h>
+//#include <SoftwareSerial.h>
 
-const int trigPin = 15;
-const int echoPin = 16;
+#if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
+  // Required for Serial on Zero based boards
+  #define Serial SERIAL_PORT_USBVIRTUAL
+#endif
 
-const int trigPin2 = 7;
+const int trigPin = 19;
+const int echoPin = 20;
+
+const int trigPin2 = 5;
 const int echoPin2 = 6;
 
 long duration;
